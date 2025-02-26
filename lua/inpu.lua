@@ -17,7 +17,7 @@ function M.under_cursor(_)
 end
 
 function M.input(opts, on_confirm)
-	local prompt = opts.prompt or " Input: "
+	local prompt = opts.prompt and string.format(" %s", opts.prompt) or " Input: "
 	local default = opts.default or ""
 	on_confirm = on_confirm or function() end
 
